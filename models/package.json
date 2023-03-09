@@ -1,0 +1,22 @@
+{
+  "name": "@vc-cli-dev/models",
+  "version": "0.0.0",
+  "description": "models package",
+  "author": "victor <victor.chen@>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/models.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/models.test.js"
+  }
+}
