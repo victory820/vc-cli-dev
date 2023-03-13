@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 const importLocal = require('import-local')
 
-console.log('this is core bin!!!')
-
-if (importLocal(__dirname)) {
+if (importLocal(__filename)) {
   console.log('使用本地版本')
+  require('npmlog').info('cli', '正在使用本地版本')
 } else {
-  console.log('远程版本')
+  require('../lib')(process.argv.splice(2))
 }
