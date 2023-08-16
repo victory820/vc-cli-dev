@@ -1,0 +1,22 @@
+{
+  "name": "@v-cli-dev/init",
+  "version": "0.0.1",
+  "description": "command init",
+  "author": "victor <victor.chen@geekbang.org>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://npmregistry.geekbang.org/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@v-cli-dev/init.test.js"
+  }
+}
