@@ -2,7 +2,7 @@
   "name": "@v-cli-dev/init",
   "version": "0.0.1",
   "description": "command init",
-  "author": "victor <victor.chen@geekbang.org>",
+  "author": "victor",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",
@@ -14,7 +14,8 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://npmregistry.geekbang.org/"
+    "registry": "https://registry.yarnpkg.com/",
+    "access": "public"
   },
   "scripts": {
     "test": "node ./__tests__/@v-cli-dev/init.test.js"
