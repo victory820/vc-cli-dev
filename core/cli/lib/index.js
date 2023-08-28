@@ -12,6 +12,7 @@ const { Command } = require('commander')
 // 本地库
 const log = require('@v-cli-dev/log')
 const init = require('@v-cli-dev/init')
+const exec = require('@v-cli-dev/exec')
 
 // 本地文件
 const pkg = require('../package.json')
@@ -29,6 +30,9 @@ async function core() {
     registerCommand()
   } catch (error) {
     log.error(error.message)
+    if (program.debug) {
+      console.log(error)
+    }
   }
 }
 
@@ -42,7 +46,7 @@ function registerCommand() {
     .option('-tp, --targetPath <targetPath>', '指定调试路径', '')
 
   // 创建init命令
-  program.command('init [projectName]').option('-f, --force', '是否强制初始化项目').action(init)
+  program.command('init [projectName]').option('-f, --force', '是否强制初始化项目').action(exec)
 
   // 指定调试路径
   program.on('option:targetPath', function () {
@@ -81,7 +85,7 @@ async function prepare() {
   checkRoot()
   checkUserHome()
   checkEnv()
-  // await checkGlobalUpdate()
+  await checkGlobalUpdate()
 }
 
 async function checkGlobalUpdate() {

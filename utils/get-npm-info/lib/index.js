@@ -34,4 +34,4 @@ function getDefaultRegistry(isOrigin = false) {
   return isOrigin ? 'https://registry.npmjs.org/' : 'https://registry.npmmirror.com/'
 }
 
-module.exports = { getLastVersion }
+module.exports = { getLastVersion, getDefaultRegistry }

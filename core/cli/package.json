@@ -24,6 +24,7 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
+    "@v-cli-dev/exec": "workspace:^",
     "@v-cli-dev/get-npm-info": "workspace:^",
     "@v-cli-dev/init": "workspace:^",
     "@v-cli-dev/log": "workspace:^",

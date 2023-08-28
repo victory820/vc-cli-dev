@@ -1,0 +1,33 @@
+{
+  "name": "@v-cli-dev/exec",
+  "version": "0.0.1",
+  "description": "执行命令",
+  "author": "victor",
+  "homepage": "https://github.com/victory820/vc-cli-dev#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victory820/vc-cli-dev.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@v-cli-dev/exec.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/victory820/vc-cli-dev/issues"
+  },
+  "dependencies": {
+    "@v-cli-dev/log": "workspace:^",
+    "@v-cli-dev/package": "workspace:^"
+  }
+}
