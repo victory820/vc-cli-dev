@@ -58,7 +58,7 @@ async function exec() {
   const rootFile = pkg.getRootFilePath()
   console.log('入口文件:', rootFile)
   if (rootFile) {
-    require(rootFile).apply(null, arguments)
+    require(rootFile).call(null, Array.from(arguments))
   }
 }
 

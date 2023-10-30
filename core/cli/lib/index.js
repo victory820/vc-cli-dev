@@ -17,7 +17,7 @@ const exec = require('@v-cli-dev/exec')
 // 本地文件
 const pkg = require('../package.json')
 
-const { LOWEST_NODE_VERSION, DEFAULT_CLI_HOME } = require('./const')
+const { DEFAULT_CLI_HOME } = require('./const')
 
 const userHome = os.homedir()
 
@@ -81,7 +81,6 @@ function registerCommand() {
 
 async function prepare() {
   checkPkgVersion()
-  checkNodeVersion()
   checkRoot()
   checkUserHome()
   checkEnv()
@@ -150,14 +149,6 @@ function checkRoot() {
   // 防止sudo创建文件，其他用户无法使用
   const rootCheck = require('root-check')
   rootCheck()
-}
-
-function checkNodeVersion() {
-  const currentVersion = process.version
-  const lowestVersion = LOWEST_NODE_VERSION
-  if (!semver.gte(currentVersion, lowestVersion)) {
-    throw new Error(colors.red(`脚手架需要安装 ${LOWEST_NODE_VERSION} 以上版本的nodejs`))
-  }
 }
 
 function checkPkgVersion() {
